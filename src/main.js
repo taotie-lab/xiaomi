@@ -1,13 +1,13 @@
 import Vue from 'vue'
-import Home from './views/Home.vue'
+import App from '../src/App.vue'
 import router from './router'
 import store from './store'
-import { Tabbar, TabbarItem, Icon, NavBar } from 'vant'
+import { Tabbar, TabbarItem, Icon, NavBar, Grid, GridItem } from 'vant'
 import './global.scss'
 Vue.config.productionTip = false
-Vue.use(Tabbar).use(TabbarItem).use(Icon).use(NavBar)
+Vue.use(Tabbar).use(TabbarItem).use(Icon).use(NavBar).use(Grid).use(GridItem)
 new Vue({
   router,
   store,
-  render: h => h(Home)
+  render: h => h(App)
 }).$mount('#app')

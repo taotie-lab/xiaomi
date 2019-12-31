@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>登录</h1>
+    <h1>注册</h1>
   </div>
 </template>
 <script>
@@ -8,6 +8,6 @@ export default {
   name: 'login'
 }
 </script>
-<style>
+<style lang='scss' >
 
 </style>

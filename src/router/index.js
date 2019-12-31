@@ -14,14 +14,11 @@ import My from '../views/My.vue'
 import Personalcenter from '../views/My/Personalcenter.vue'
 
 import Login from '../views/Login.vue'
+import Landing from '../views/Landing.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    redirect: '/home/emphasis'
-  },
   {
     path: '/home',
     component: Home,
@@ -29,42 +26,50 @@ const routes = [
       {
         path: 'emphasis',
         component: Emphasis
-      }
-    ]
-  },
-  {
-    path: '/classfig',
-    component: Classfig,
-    children: [
+      },
       {
-        path: 'newproduct',
-        component: Newproduct
-      }
-    ]
-  },
-  {
-    path: '/shopping',
-    component: Shopping,
-    children: [
+        path: '/classfig',
+        component: Classfig,
+        children: [
+          {
+            path: 'newproduct',
+            component: Newproduct
+          }
+        ]
+      },
       {
-        path: 'guess',
-        component: Guess
-      }
-    ]
-  },
-  {
-    path: '/my',
-    component: My,
-    children: [
+        path: '/shopping',
+        component: Shopping,
+        children: [
+          {
+            path: 'guess',
+            component: Guess
+          }
+        ]
+      },
       {
-        path: 'personalcenter',
-        component: Personalcenter
+        path: '/my',
+        component: My,
+        children: [
+          {
+            path: 'personalcenter',
+            component: Personalcenter
+          }
+        ]
       }
     ]
   },
   {
     path: '/login',
     component: Login
+  },
+  {
+    path: '/landing',
+    component: Landing
+  },
+  {
+    path: '/',
+    redirect: '/home/emphasis'
   }
 ]
 

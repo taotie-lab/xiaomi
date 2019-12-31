@@ -10,9 +10,9 @@
         :key='item.id'
         :name="item.name"
         :to="item.to"
+        :icon='item.icon'
         >
         <span>{{item.name}}</span>
-        <i slot="icon" :class="['iconfont', item.icon]"/>
         </van-tabbar-item>
       </van-tabbar>
     </div>
@@ -54,7 +54,7 @@ export default {
   }
 }
 </script>
-<style lang='scss'>
+<style lang='scss' >
 .home{
   display: flex;
   flex-direction: column;
